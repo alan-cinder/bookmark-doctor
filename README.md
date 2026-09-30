@@ -73,6 +73,10 @@ Flags:
   GET if the server rejects HEAD) and report anything that isn't a 2xx/3xx
   response. Off by default since it makes real network requests and can
   take a while on a large bookmark collection.
+- `--json` — print one JSON object instead of the text report, with
+  `bookmark_count`, `duplicates` (url, count, and the title/folder/add_date
+  of each copy) and `broken` (url and status, or `null` if `--check-links`
+  was not given). Nothing else is written to stdout in this mode.
 - `--timeout SECONDS` — per-request timeout (default 8.0)
 - `--workers N` — how many links to check concurrently (default 10)
 
